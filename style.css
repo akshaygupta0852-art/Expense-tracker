@@ -1,0 +1,232 @@
+:root {
+  --accent-color: rgb(0, 128, 255);
+  --color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  background-color: whitesmoke;
+}
+
+/* Navbar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  box-shadow: 1px 1px 10px black;
+  padding: 0px 7px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  background-color: whitesmoke;
+}
+nav div {
+  display: flex;
+  gap: 10px;
+}
+nav div li {
+  list-style: none;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+nav div li:hover {
+  color: var(--accent-color);
+}
+nav h3 span {
+  color: var(--accent-color);
+}
+
+/* Main container */
+
+#mainContainer {
+  width: 100%;
+  padding: 90px 10px 90px 10px;
+}
+
+/* table */
+
+table tr {
+  margin-top: 15px;
+  height: 40px;
+  display: flex;
+}
+.serial {
+  width: 20px;
+}
+.expenseName {
+  width: 150px;
+  text-align: left;
+}
+.type {
+  width: 80px;
+  text-align: left;
+}
+.total {
+  width: 70px;
+  text-align: left;
+}
+
+/* income dialog */
+
+#incomeDialog {
+  align-self: center;
+  background-color: white;
+  border: none;
+  justify-self: center;
+}
+#containerDialog {
+  height: 150px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#containerDialog div {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: right;
+}
+#clsIncomeDilog {
+  margin-right: 10px;
+  background-color: transparent;
+  font-size: 24px;
+  transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+#clsIncomeDilog:hover {
+  color: var(--accent-color);
+}
+#updatedIncome {
+  outline: none;
+  width: 90%;
+  padding: 10px 5px;
+}
+#updatedIncome::-webkit-inner-spin-button,
+#updatedIncome::-webkit-outer-spin-button {
+  appearance: none;
+}
+#saveIncomeBtn {
+  margin-top: 20px;
+  outline: none;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 4px;
+  padding: 7px 14px;
+  border: none;
+  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+#saveIncomeBtn:hover {
+  scale: 1.1;
+}
+
+/* Expense dialog */
+
+#expenseDialog {
+  position: absolute;
+  top: 0%;
+  align-self: center;
+  background-color: white;
+  border: none;
+  justify-self: center;
+  overflow: hidden;
+}
+#containerExpenseDialog {
+  height: 250px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#containerExpenseDialog div {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: right;
+}
+#clsExpenseDialog {
+  margin-right: 10px;
+  background-color: transparent;
+  font-size: 24px;
+  transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+#clsExpenseDialog:hover {
+  color: var(--accent-color);
+}
+#typeSelect {
+  margin-top: 20px;
+  width: 90%;
+  outline: none;
+  padding: 4px;
+}
+#expenseReasonInput {
+  margin-top: 20px;
+  width: 90%;
+  padding: 4px;
+}
+#expenseAmount {
+  margin-top: 20px;
+  width: 90%;
+  padding: 4px;
+}
+#expenseAmount::-webkit-inner-spin-button,
+#expenseAmount::-webkit-outer-spin-button{
+    appearance: none;
+}
+#cnfrmExpense {
+  margin-top: 20px;
+  outline: none;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 4px;
+  padding: 7px 14px;
+  border: none;
+  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+#cnfrmExpense:hover {
+  scale: 1.1;
+}
+
+/* Footer */
+
+footer {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  padding: 0px 10px;
+  box-shadow: 1px 1px 10px black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+footer div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

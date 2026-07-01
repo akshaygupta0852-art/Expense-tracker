@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Nav bar -->
+
+    <nav>
+      <h3>Expense<span>Tracker</span></h3>
+      <div>
+        <li id="addExpense">Add expense</li>
+        <li id="updateIncome">Update income</li>
+      </div>
+    </nav>
+
+    <!-- Main Container -->
+
+    <div id="mainContainer">
+      <table>
+        <tr>
+          <th class="expenseName">Expense</th>
+          <th class="type">Type</th>
+          <th class="total">Total</th>
+        </tr>
+      </table>
+    </div>
+
+    <!-- dialog income update -->
+
+    <dialog id="incomeDialog">
+      <div id="containerDialog">
+        <div>
+          <button type="button" id="clsIncomeDilog">X</button>
+        </div>
+        <input
+          type="number"
+          id="updatedIncome"
+          required
+          placeholder="Enter your monthly income here..."
+        />
+        <button type="submit" id="saveIncomeBtn">Save</button>
+      </div>
+    </dialog>
+
+    <!-- dialog Add new expense -->
+
+    <dialog id="expenseDialog">
+      <div id="containerExpenseDialog">
+        <div>
+          <button type="button" id="clsExpenseDialog">X</button>
+        </div>
+        <select id="typeSelect">
+          <option value="per day">per day</option>
+          <option value="per week">per week</option>
+          <option value="per month">per month</option>
+        </select>
+        <input type="text" id="expenseReasonInput" required placeholder="Reason of expense...">
+        <input type="number" id="expenseAmount" required placeholder="Amount of expense...">
+        <button type="submit" id="cnfrmExpense">Add</button>
+      </div>
+    </dialog>
+
+    <!-- Footer -->
+
+    <footer>
+      <div>
+        <span>Total income per month : </span><span id="totalIncome"></span>
+      </div>
+      <div>
+        <span>Total expense per month :</span>
+        <span id="totalExpense"></span>
+      </div>
+      <div><span>Saving per month :</span><span id="savings"></span></div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
